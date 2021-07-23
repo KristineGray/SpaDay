@@ -1,5 +1,14 @@
 ﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    1. Create a form that accepts inputs for each of the User class properties. 
+    
+    2. Include an additional password input field to verify the password input. 
+    
+    3. The form should be set up to POST to /user.
 *@
-@{
-}
+<form action="/user" method="post">
+    <input type="text" name="username" value="un" />
+    <input type="email" name="email" value="email" />
+    <input type="password" name="password" value="pw-initial" />
+    <input type="password" name="password" value="pw-validation" />
+    <input type="sub" name="submit" value="submit" />
+</form>
