@@ -12,5 +12,14 @@ namespace SpaDay.Controllers
         {
             return View();
         }
+
+        // Create action method Add()
+        // Should correspond to path: /user/add
+        // return Add.cshtml view
+        [Route("/user/add")]
+        public IActionResult Add()
+        {
+            return View();
+        }
     }
 }
