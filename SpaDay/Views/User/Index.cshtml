@@ -8,3 +8,11 @@
 
     <a asp-controller="Spa" asp-action="Index">To the Spa!</a>
 </div>
+<div>
+    <h3>User Details:</h3>
+    <ul>
+        <li>Name: @ViewBag.username</li>
+        <li>Email: @ViewBag.email</li>
+        <li>Sign-up Date: @ViewBag.date</li>
+    </ul>
+</div>

@@ -26,7 +26,7 @@ namespace SpaDay.Controllers
             ViewBag.verify = verify;
             ViewBag.username = newUser.Username;
             ViewBag.email = newUser.Email;
-            ViewBag.password = newUser.Password;
+            ViewBag.date = newUser.Date;
 
             if (newUser.Password.Equals(verify))
             {
