@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SpaDay.Data;
 using SpaDay.Models;
 using System;
 using System.Collections.Generic;
@@ -14,32 +15,26 @@ namespace SpaDay.Controllers
             return View();
         }
 
-        // Create action method Add()
-        // Should correspond to path: /user/add
-        // return Add.cshtml view
-        [Route("/user/add")]
         public IActionResult Add()
         {
             return View();
         }
 
-        // Create action method for SubmitAddUserForm
+        [HttpPost("/user/add")]
         public IActionResult SubmitAddUserForm(User newUser, string verify)
         {
-            // add form submission handling code here
+            ViewBag.verify = verify;
+            ViewBag.username = newUser.Username;
+            ViewBag.email = newUser.Email;
+            ViewBag.password = newUser.Password;
 
-            // Check that the verify parameter matches the password within the newUser object
-            // If true: 
-                // store the user’s name in a ViewBag property and
-                // return View("Index").
-            // If false, render the form again
-            if (newUser.Password == verify)
+            if (newUser.Password.Equals(verify))
             {
-                ViewBag.username = newUser.Username;
                 return View("Index");
             }
             else
             {
+                ViewBag.error = "Passwords must match to continue to the spa. Try again.";
                 return View("Add");
             }
         }

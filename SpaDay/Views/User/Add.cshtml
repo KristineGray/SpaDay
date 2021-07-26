@@ -5,10 +5,24 @@
     
     3. The form should be set up to POST to /user.
 *@
-<form action="/user" method="post">
-    <input type="text" name="username" value="un" />
-    <input type="email" name="email" value="email" />
-    <input type="password" name="password" value="pw-initial" />
-    <input type="password" name="verify" value="pw-validation" />
-    <input type="submit" name="submit" value="submit" />
+@if (ViewBag.error != null)
+{
+    <p id="error-message">@ViewBag.error</p>
+}
+
+<form method="post">
+    <label for="username">Username: </label>
+    <input type="text" name="username" placeholder="Username" value="@ViewBag.username"/>
+    
+    <label for="email">Email: </label>
+    <input type="email" name="email" placeholder="Email@email.com" value="@ViewBag.email"/>
+    
+    <label for="password">Password: </label>
+    <input type="password" name="password" />
+    
+    <label for="verify">Verify Password: </label>
+    <input type="password" name="verify" />
+    
+        
+    <input type="submit" name="submit" value="Submit" />
 </form>
