@@ -9,6 +9,7 @@ namespace SpaDay.ViewModels
     public class AddUserViewModel
     {
         [Required]
+        [StringLength(15, MinimumLength =5)]
         public string Username { get; set; }
         
         [Required]
