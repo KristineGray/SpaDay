@@ -22,23 +22,25 @@ namespace SpaDay.Controllers
             return View(addUserViewModel);
         }
 
-        [HttpPost("/user/add")]
-        public IActionResult SubmitAddUserForm(AddUserViewModel addUserViewModel)
+        [HttpPost]
+        public IActionResult Add(AddUserViewModel addUserViewModel)
         {
-            ViewBag.verify = verify;
-            ViewBag.username = newUser.Username;
-            ViewBag.email = newUser.Email;
-            ViewBag.date = newUser.Date;
+            if (ModelState.IsValid)
+            {
+                if (addUserViewModel.Password == addUserViewModel.VerifyPassword)
+                {
+                    User newUser = new User
+                    {
+                        Username = addUserViewModel.Username,
+                        Password = addUserViewModel.Password,
+                        Email = addUserViewModel.Email
+                    };
 
-            if (newUser.Password.Equals(verify))
-            {
-                return View("Index");
+                    return View("Index", newUser);
+                }
             }
-            else
-            {
-                ViewBag.error = "Passwords must match to continue to the spa. Try again.";
-                return View("Add");
-            }
+            ViewBag.error = "Passwords must match to continue to the spa. Try again.";
+            return View(addUserViewModel);
         }
     }
 }
