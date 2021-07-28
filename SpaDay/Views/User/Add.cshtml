@@ -4,29 +4,30 @@
 <h1>User Sign Up Form</h1>
 
 <form method="post">
-    <div>
-        <label asp-for="Username"></label>
-        <input asp-for="Username" value="@Model.Username" />
-        <span asp-validation-for="Username"></span>
-    </div>
-    <br />
-    <div>
-        <label asp-for="Email"></label>
-        <input asp-for="Email" value="@Model.Email" />
-        <span asp-validation-for="Email"></span>
-    </div>
-    <br />
-    <div>
-        <label asp-for="Password"></label>
-        <input asp-for="Password" type="password" value="@Model.Password"/>
-        <span asp-validation-for="Password"></span>
-    </div>
-    <br />
-    <div>
-        <label asp-for="VerifyPassword"></label>
-        <input asp-for="VerifyPassword" type="password" />
-        <span asp-validation-for="VerifyPassword"></span>
-    </div>
-    <br />
+    <table>
+        <tr>
+            <td><label asp-for="Username"></label></td>
+            <td><input asp-for="Username" value="@Model.Username" /></td>
+            <td><span asp-validation-for="Username"></span></td>
+        </tr>
+
+        <tr>
+            <td><label asp-for="Email"></label></td>
+            <td><input asp-for="Email" value="@Model.Email" /></td>
+            <td><span asp-validation-for="Email"></span></td>
+        </tr>
+
+        <tr>
+            <td><label asp-for="Password"></label></td>
+            <td><input asp-for="Password" type="password" value="@Model.Password" /></td>
+            <td><span asp-validation-for="Password"></span></td>
+        </tr>
+
+        <tr>
+            <td><label asp-for="VerifyPassword"></label></td>
+            <td><input asp-for="VerifyPassword" type="password" /></td>
+            <td><span asp-validation-for="VerifyPassword"></span></td>
+        </tr>
+    </table>
     <input type="submit" name="submit" value="Sign Up!" />
 </form>

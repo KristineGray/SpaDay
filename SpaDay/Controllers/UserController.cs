@@ -36,7 +36,6 @@ namespace SpaDay.Controllers
 
                 return View("Index", newUser);
             }
-            
             return View(addUserViewModel);
         }
     }
