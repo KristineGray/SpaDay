@@ -23,7 +23,7 @@ namespace SpaDay.Controllers
         }
 
         [HttpPost("/user/add")]
-        public IActionResult SubmitAddUserForm(User newUser, string verify)
+        public IActionResult SubmitAddUserForm(AddUserViewModel addUserViewModel)
         {
             ViewBag.verify = verify;
             ViewBag.username = newUser.Username;
