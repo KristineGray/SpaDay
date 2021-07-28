@@ -39,7 +39,7 @@ namespace SpaDay.Controllers
                     return View("Index", newUser);
                 }
             }
-            ViewBag.error = "Passwords must match to continue to the spa. Try again.";
+            
             return View(addUserViewModel);
         }
     }
