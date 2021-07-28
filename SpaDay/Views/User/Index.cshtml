@@ -1,5 +1,6 @@
-﻿@using SpaDay.ViewModels
-@model AddUserViewModel
+﻿@using SpaDay.Models
+
+@model User
 
 <title>Spa Welcome Page</title>
 <div>
@@ -12,6 +13,6 @@
     <ul>
         <li>Name: @Model.Username</li>
         <li>Email: @Model.Email</li>
-        <li>Sign-up Date: @Model.Date</li>
+        <li>Sign-up Date: @Model.Date.ToString("dd MMMM yyyy")</li>
     </ul>
 </div>
