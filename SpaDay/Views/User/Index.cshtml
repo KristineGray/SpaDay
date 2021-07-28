@@ -1,18 +1,17 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using SpaDay.ViewModels
+@model AddUserViewModel
+
+<title>Spa Welcome Page</title>
 <div>
-    <h1>Welcome to the spa, <span>@ViewBag.username</span>!</h1>
+    <h1>Welcome to the spa, <span>@Model.Username</span>!</h1>
 
     <a asp-controller="Spa" asp-action="Index">To the Spa!</a>
 </div>
 <div>
     <h3>User Details:</h3>
     <ul>
-        <li>Name: @ViewBag.username</li>
-        <li>Email: @ViewBag.email</li>
-        <li>Sign-up Date: @ViewBag.date</li>
+        <li>Name: @Model.Username</li>
+        <li>Email: @Model.Email</li>
+        <li>Sign-up Date: @Model.Date</li>
     </ul>
 </div>
