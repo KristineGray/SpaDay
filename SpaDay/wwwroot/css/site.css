@@ -72,6 +72,26 @@ body {
 
 /* My edits for styles
 -------------------------------------------------- */
-#error-message {
+.field-validation-error {
     color: red;
+}
+
+td {
+    padding: 3px;
+}
+
+td.add-form-label {
+    text-justify: auto;
+}
+
+.user-welcome-msg {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+span.user-index-field {
+    font-weight: bold;
 }

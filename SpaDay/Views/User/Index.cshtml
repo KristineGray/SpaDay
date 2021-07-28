@@ -4,15 +4,15 @@
 
 <title>Spa Welcome Page</title>
 <div>
-    <h1>Welcome to the spa, <span>@Model.Username</span>!</h1>
+    <h1 class="user-welcome-msg">Welcome to the spa, <span>@Model.Username</span>!</h1>
 
     <a asp-controller="Spa" asp-action="Index">To the Spa!</a>
 </div>
 <div>
     <h3>User Details:</h3>
     <ul>
-        <li>Name: @Model.Username</li>
-        <li>Email: @Model.Email</li>
-        <li>Sign-up Date: @Model.Date.ToString("dd MMMM yyyy")</li>
+        <li><span class="user-index-field">Name: </span>@Model.Username</li>
+        <li><span class="user-index-field">Email: </span>@Model.Email</li>
+        <li><span class="user-index-field">Sign-up Date: </span>@Model.Date.ToString("dd MMMM yyyy")</li>
     </ul>
 </div>

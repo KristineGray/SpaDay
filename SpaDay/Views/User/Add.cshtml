@@ -6,25 +6,25 @@
 <form method="post">
     <table>
         <tr>
-            <td><label asp-for="Username"></label></td>
+            <td class="add-form-label"><label asp-for="Username"></label></td>
             <td><input asp-for="Username" value="@Model.Username" /></td>
             <td><span asp-validation-for="Username"></span></td>
         </tr>
 
         <tr>
-            <td><label asp-for="Email"></label></td>
+            <td class="add-form-label"><label asp-for="Email"></label></td>
             <td><input asp-for="Email" value="@Model.Email" /></td>
             <td><span asp-validation-for="Email"></span></td>
         </tr>
 
         <tr>
-            <td><label asp-for="Password"></label></td>
+            <td class="add-form-label"><label asp-for="Password"></label></td>
             <td><input asp-for="Password" type="password" value="@Model.Password" /></td>
             <td><span asp-validation-for="Password"></span></td>
         </tr>
 
         <tr>
-            <td><label asp-for="VerifyPassword"></label></td>
+            <td class="add-form-label"><label asp-for="VerifyPassword"></label></td>
             <td><input asp-for="VerifyPassword" type="password" /></td>
             <td><span asp-validation-for="VerifyPassword"></span></td>
         </tr>
